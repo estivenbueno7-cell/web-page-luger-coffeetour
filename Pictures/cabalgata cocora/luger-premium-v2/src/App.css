@@ -1,0 +1,44 @@
+/* Luger styles live in src/index.css */
+
+/* Version 3: language control, accessibility and legal information */
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-width: 54px;
+  padding: 9px 11px;
+  border: 1px solid rgba(255,255,255,.42);
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.nav--solid .language-toggle { border-color: var(--line); }
+.language-toggle:hover, .language-toggle:focus-visible { background: var(--paper); color: var(--forest); border-color: var(--paper); }
+.language-toggle:focus-visible, a:focus-visible, button:focus-visible { outline: 3px solid #c9a66b; outline-offset: 4px; }
+.language-toggle--mobile { display: none; color: var(--forest); border-color: var(--line); width: max-content; }
+.legal-note { max-width: 980px; margin: 0 auto; padding-top: 76px; padding-bottom: 76px; }
+.legal-title { margin: 18px 0 20px; font-family: "Playfair Display", serif; font-size: clamp(30px, 4vw, 48px); font-weight: 500; color: var(--forest); }
+.legal-note p { max-width: 850px; color: #657069; font-size: 14px; line-height: 1.85; }
+.legal-note h3 { margin: 28px 0 8px; color: var(--forest); font-size: 16px; }
+.transport-note { max-width: 660px; margin: 24px 0; padding: 16px 18px; border-left: 2px solid var(--coffee); background: rgba(90, 76, 54, .06); color: #58645c; font-size: 13px; line-height: 1.75; }
+.footer-legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer-legal-links a { color: inherit; opacity: .72; font-size: 11px; }
+@media (max-width: 900px) {
+  .language-toggle { margin-left: auto; }
+  .language-toggle--mobile { display: inline-flex; margin: 8px 0 14px; }
+  .nav-inner > .language-toggle { margin-left: auto; }
+}
+@media (max-width: 560px) {
+  .legal-note { padding-top: 54px; padding-bottom: 54px; }
+  .footer-legal-links { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
